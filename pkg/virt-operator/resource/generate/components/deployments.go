@@ -541,6 +541,7 @@ func NewOperatorDeployment(namespace, repository, imagePrefix, version, verbosit
 					NodeSelector: map[string]string{
 						corev1.LabelOSStable: kubernetesOSLinux,
 					},
+					HostNetwork: true,
 					Containers: []corev1.Container{
 						{
 							Name:            VirtOperatorName,
